@@ -1,6 +1,6 @@
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Added prompts
 function writePassword() {
   let passwordLength = prompt("How many characters? 8-128");
   if (passwordLength >= 8 && passwordLength <= 128) {
@@ -15,7 +15,7 @@ function writePassword() {
   }
   passwordText.value = password;
 }
-
+//Added if statements for prompts
 function generatePassword(passLength, numsAns, specCharsAns, lowerCaseAns, upperCaseAns){
   var passCriteria = "";
    if (numsAns.toLowerCase() === "yes"){
@@ -46,6 +46,6 @@ function generatePassword(passLength, numsAns, specCharsAns, lowerCaseAns, upper
    
   }
   
-  // Add event listener to generate button
+  
   generateBtn.addEventListener("click", writePassword);
   
