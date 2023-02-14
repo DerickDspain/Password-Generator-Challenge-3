@@ -29,3 +29,23 @@ function generatePassword(passLength, numsAns, specCharsAns, lowerCaseAns, upper
    if (lowerCaseAns.toLowerCase() === "yes"){
      var lowerCase ="abcdefghijklmnopqrstuvwxyz";
      passCriteria += lowerCase;
+    }
+    if (upperCaseAns.toLowerCase() === "yes"){
+      var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      passCriteria += upperCase;
+    }
+    if (numsAns.toLowerCase() === "no" && specCharsAns.toLowerCase() === "no" && lowerCaseAns.toLowerCase() === "no" && upperCaseAns.toLowerCase() === "no") {
+      alert("Please choose at least one criteria");
+   } 
+      var password ="";
+      for (let i = 0; i < passLength; i++){
+        var randomIndex = Math.floor(Math.random()* passCriteria.length);
+        password += passCriteria[randomIndex]
+      }
+  return password;
+   
+  }
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+  
