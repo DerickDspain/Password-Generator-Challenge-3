@@ -36,6 +36,7 @@ function generatePassword(passLength, numsAns, specCharsAns, lowerCaseAns, upper
     }
     if (numsAns.toLowerCase() === "no" && specCharsAns.toLowerCase() === "no" && lowerCaseAns.toLowerCase() === "no" && upperCaseAns.toLowerCase() === "no") {
       alert("Please choose at least one criteria");
+      return;
    } 
       var password ="";
       for (let i = 0; i < passLength; i++){
