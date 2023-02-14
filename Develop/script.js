@@ -15,3 +15,17 @@ function writePassword() {
   }
   passwordText.value = password;
 }
+
+function generatePassword(passLength, numsAns, specCharsAns, lowerCaseAns, upperCaseAns){
+  var passCriteria = "";
+   if (numsAns.toLowerCase() === "yes"){
+     var allNums ="0123456789";
+     passCriteria += allNums;
+   }
+   if (specCharsAns.toLowerCase() === "yes"){
+     var specChars = "!@#$%&*?";
+     passCriteria += specChars;
+   } 
+   if (lowerCaseAns.toLowerCase() === "yes"){
+     var lowerCase ="abcdefghijklmnopqrstuvwxyz";
+     passCriteria += lowerCase;
